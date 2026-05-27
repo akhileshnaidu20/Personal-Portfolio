@@ -38,13 +38,13 @@
 </head>
 <body class="bg-color000 text-colorCCC9DC antialiased selection:bg-color324A5F/40">
 
-    <!-- Multidisciplinary Interactive Canvas Background -->
-    <canvas id="creative-backdrop" class="fixed inset-0 -z-10 pointer-events-none"></canvas>
+    <!-- Structured Engineering Schematic Background Canvas -->
+    <canvas id="schematic-canvas" class="fixed inset-0 -z-10 pointer-events-none"></canvas>
 
     <!-- Scroll Progress Indicator -->
     <div id="scroll-tracker" class="fixed top-0 left-0 h-[2.5px] bg-colorCCC9DC z-50 w-0 transition-all duration-100"></div>
 
-    <!-- Minimal Follow Cursor (Desktop Only) -->
+    <!-- Minimal Custom Cursor (Hidden on touch devices) -->
     <div id="custom-cursor" class="hidden md:block"></div>
 
     <!-- Navigation Header -->
@@ -103,7 +103,6 @@
                 <div class="relative group">
                     <object data="profile.jpg" type="image/jpg" class="w-48 h-48 md:w-64 md:h-64 rounded-full border border-color1B2A41 object-cover grayscale transition duration-500 group-hover:grayscale-0">
                         <svg class="w-48 h-48 md:w-64 md:h-64 rounded-full border border-color1B2A41 bg-color0C1821" viewBox="0 0 100 100">
-                            <!-- High-fidelity aesthetic placeholder calibration frame -->
                             <circle cx="50" cy="50" r="45" fill="none" stroke="#324A5F" stroke-width="0.5" />
                             <circle cx="50" cy="50" r="40" fill="none" stroke="#1B2A41" stroke-width="1" stroke-dasharray="6,4" />
                             <text x="50%" y="54%" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="500" font-size="20" fill="#CCC9DC">AN</text>
@@ -114,7 +113,7 @@
         </div>
     </section>
 
-    <!-- About Section with Markdown Text Fixes -->
+    <!-- About Section -->
     <section id="about" class="py-24 md:py-32 border-t border-color1B2A41/30">
         <div class="container mx-auto px-4 md:px-6 max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -287,27 +286,16 @@
         </div>
     </section>
 
-    <!-- Projects Section with self-contained, responsive SVGs -->
+    <!-- Projects Section -->
     <section id="projects" class="py-24 md:py-32 border-t border-color1B2A41/30 bg-color0C1821/10">
         <div class="container mx-auto px-4 md:px-6 max-w-6xl">
             <h2 class="text-3xl font-display font-medium text-white mb-16">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Legal AI Project -->
+                <!-- Legal AI Project (Equipped with requested graphic layout) -->
                 <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
-                        <svg class="absolute inset-0 w-full h-full stroke-color324A5F/30" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <pattern id="pat-legal" width="16" height="16" patternUnits="userSpaceOnUse">
-                                    <path d="M 16 0 L 0 0 0 16" fill="none" stroke-width="0.5"/>
-                                </pattern>
-                            </defs>
-                            <rect width="100%" height="100%" fill="url(#pat-legal)" />
-                            <!-- Clean architectural design curves -->
-                            <path d="M10 80 Q 50 10 90 80" class="stroke-color324A5F/30 fill-none" stroke-width="0.8" />
-                            <path d="M30 80 Q 50 30 70 80" class="stroke-color324A5F/10 fill-none" stroke-width="0.5" />
-                        </svg>
-                        <i class="fas fa-balance-scale text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
+                        <img src="legal-ai.jpg" alt="Legal AI Court Gavel and Document" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">HackBLR 2026 Build</span>
                     <h3 class="text-xl font-bold text-white mb-2">Legal AI Assistant</h3>
@@ -321,11 +309,15 @@
                 <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
                         <svg class="absolute inset-0 w-full h-full stroke-color324A5F/30" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100%" height="100%" fill="url(#pat-legal)" />
-                            <circle cx="50%" cy="50%" r="30" class="stroke-color324A5F/40 fill-none" stroke-width="0.5" stroke-dasharray="2" />
-                            <path d="M 10 50 C 30 20, 70 80, 90 50" class="stroke-color324A5F/20 fill-none" stroke-width="0.8" />
+                            <defs>
+                                <pattern id="custom-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+                                    <path d="M 16 0 L 0 0 0 16" fill="none" stroke-width="0.5"/>
+                                </pattern>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#custom-grid)" />
+                            <line x1="50%" y1="10%" x2="50%" y2="90%" class="stroke-color324A5F/40" stroke-width="0.5" />
                         </svg>
-                        <i class="fas fa-leaf text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
+                        <i class="fas fa-seedling text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">AI & Agriculture</span>
                     <h3 class="text-xl font-bold text-white mb-2">KisanMitra</h3>
@@ -339,11 +331,10 @@
                 <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
                         <svg class="absolute inset-0 w-full h-full stroke-color324A5F/30" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100%" height="100%" fill="url(#pat-legal)" />
-                            <line x1="10" y1="10" x2="90" y2="10" class="stroke-color324A5F/10" stroke-width="0.5"/>
-                            <rect x="25" y="25" width="50" height="40" class="stroke-color324A5F/30 fill-none" stroke-width="0.8" />
+                            <rect width="100%" height="100%" fill="url(#custom-grid)" />
+                            <line x1="0" y1="0" x2="100%" y2="100%" class="stroke-color324A5F/40" stroke-width="0.5"/>
                         </svg>
-                        <i class="fas fa-compress text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
+                        <i class="fas fa-bullseye text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">Computer Vision</span>
                     <h3 class="text-xl font-bold text-white mb-2">Vehicle Collision Detection</h3>
@@ -357,10 +348,10 @@
                 <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
                         <svg class="absolute inset-0 w-full h-full stroke-color324A5F/30" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100%" height="100%" fill="url(#pat-legal)" />
-                            <circle cx="50" cy="50" r="35" class="stroke-color324A5F/40 fill-none" stroke-width="0.8" />
+                            <rect width="100%" height="100%" fill="url(#custom-grid)" />
+                            <rect x="35%" y="35%" width="30%" height="30%" fill="none" class="stroke-color324A5F/40" stroke-width="0.5" />
                         </svg>
-                        <i class="fas fa-portrait text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
+                        <i class="fas fa-user-check text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">Deep Learning</span>
                     <h3 class="text-xl font-bold text-white mb-2">Delivery Partner Identification</h3>
@@ -374,8 +365,8 @@
                 <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group md:col-span-2" data-aos="fade-up">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
                         <svg class="absolute inset-0 w-full h-full stroke-color324A5F/30" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100%" height="100%" fill="url(#pat-legal)" />
-                            <path d="M 10 80 L 30 40 L 60 60 L 90 20" class="stroke-color324A5F/40 fill-none" stroke-width="1" />
+                            <rect width="100%" height="100%" fill="url(#custom-grid)" />
+                            <circle cx="50%" cy="50%" r="50" class="stroke-color324A5F/20 fill-none" stroke-width="0.5" />
                         </svg>
                         <i class="fas fa-chart-line text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
                     </div>
@@ -397,7 +388,7 @@
             <h2 class="text-3xl font-display font-medium text-white mb-16 text-center">Credentials</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Academic Background -->
+                <!-- Academics -->
                 <div class="border border-color1B2A41 bg-color0C1821/40 p-8 rounded-lg" data-aos="fade-right">
                     <h4 class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest mb-6">Academic History</h4>
                     <div class="border-l border-color1B2A41 pl-6 py-1">
@@ -428,7 +419,7 @@
                         </div>
                     </div>
 
-                    <!-- Certifications Drive link -->
+                    <!-- Credentials folder link -->
                     <div class="pt-8">
                         <a href="https://drive.google.com/drive/folders/1Ub5GCwBIQAF9n5mPX4e5HRnO0YF1aDxF?usp=sharing" target="_blank" class="block text-center border border-color1B2A41 hover:border-colorCCC9DC text-white py-3 rounded text-xs font-semibold uppercase tracking-wider transition hover-target">
                             <i class="fas fa-external-link-alt mr-2 text-[10px]"></i> Open Credentials Database (Drive)
@@ -454,7 +445,7 @@
     <script>
         AOS.init({ duration: 800, once: true });
 
-        // Tab selection engine
+        // Minimalist Tab System
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.add('hidden');
@@ -499,193 +490,184 @@
             }
         }
 
-        // --- Multi-Disciplinary Vector Graphics Canvas Engine ---
-        // Generates stylized nodes representing AI, Mechanical Gears, Continuous Loops & PCB Traces.
-        const canvas = document.getElementById('creative-backdrop');
+        // --- Structured Interactive Blueprint Schematic Background Canvas ---
+        // Draws structured, clean engineering elements that slowly breathe or trace on a grid
+        const canvas = document.getElementById('schematic-canvas');
         const ctx = canvas.getContext('2d');
 
-        let elements = [];
-        let mouse = { x: null, y: null, radius: 150 };
+        let gridCells = [];
+        let gearAngle = 0;
+        let traceProgress = 0;
+        let lensScale = 1;
+        let pulseTime = 0;
 
         function initCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            elements = [];
+        }
 
-            const elementCount = Math.min(Math.floor((canvas.width * canvas.height) / 35000), 45);
-            const types = ['lens', 'gear', 'workflow', 'pcb'];
-
-            for (let i = 0; i < elementCount; i++) {
-                const type = types[Math.floor(Math.random() * types.length)];
-                elements.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.4,
-                    vy: (Math.random() - 0.5) * 0.4,
-                    size: Math.random() * 20 + 20,
-                    type: type,
-                    angle: Math.random() * Math.PI * 2,
-                    rotSpeed: (Math.random() - 0.5) * 0.015,
-                    pulse: Math.random() * Math.PI
-                });
+        // 1. Draw structured geometric background grid
+        function drawGrid() {
+            ctx.strokeStyle = 'rgba(27, 42, 65, 0.2)';
+            ctx.lineWidth = 0.5;
+            const gridSize = 40;
+            
+            ctx.beginPath();
+            for (let x = 0; x < canvas.width; x += gridSize) {
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
             }
+            for (let y = 0; y < canvas.height; y += gridSize) {
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+            }
+            ctx.stroke();
         }
 
-        // 1. Robot Head / Android Persona Optic Lens
-        function drawRobotLens(ctx, x, y, size) {
+        // 2. Robotic Optic Lens Schematic (Always clean and anchored top-right)
+        function drawRobotLensHUD() {
+            const x = canvas.width - 150;
+            const y = 200;
+            
+            ctx.strokeStyle = 'rgba(50, 74, 95, 0.25)';
+            ctx.lineWidth = 0.8;
+
+            // Outer Target Tracker Box
+            ctx.strokeRect(x - 60, y - 60, 120, 120);
+            
+            // Pulsing Internal Lens Ring
             ctx.beginPath();
-            ctx.arc(x, y, size * 0.8, 0, Math.PI * 2);
-            ctx.strokeStyle = 'rgba(50, 74, 95, 0.15)';
+            ctx.arc(x, y, 40 * lensScale, 0, Math.PI * 2);
             ctx.stroke();
 
+            // Intersecting target hair lines
             ctx.beginPath();
-            ctx.arc(x, y, size * 0.4, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(27, 42, 65, 0.2)';
-            ctx.fill();
-            ctx.strokeStyle = 'rgba(204, 201, 220, 0.25)';
+            ctx.moveTo(x - 70, y); ctx.lineTo(x - 45, y);
+            ctx.moveTo(x + 45, y); ctx.lineTo(x + 70, y);
+            ctx.moveTo(x, y - 70); ctx.lineTo(x, y - 45);
+            ctx.moveTo(x, y + 45); ctx.lineTo(x, y + 70);
             ctx.stroke();
 
-            // Reflection element representing the "thought/calculating" state
-            ctx.beginPath();
-            ctx.arc(x - size * 0.1, y - size * 0.1, 2, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-            ctx.fill();
+            // Coordinate metrics text
+            ctx.fillStyle = 'rgba(204, 201, 220, 0.2)';
+            ctx.font = '9px monospace';
+            ctx.fillText("SYS.FOC_A: 94.2%", x - 45, y + 80);
         }
 
-        // 2. Mechanical Engineering Gears & Cogs
-        function drawGear(ctx, x, y, size, angle) {
+        // 3. Interlocking Mechanical Gears Schematic (Anchored bottom-left)
+        function drawInterlockingGears() {
+            const g1 = { x: 180, y: canvas.height - 180, r: 50, teeth: 10 };
+            const g2 = { x: 260, y: canvas.height - 110, r: 35, teeth: 8 };
+
+            // Gear 1
             ctx.save();
-            ctx.translate(x, y);
-            ctx.rotate(angle);
-            ctx.strokeStyle = 'rgba(50, 74, 95, 0.2)';
-            ctx.lineWidth = 1;
-
+            ctx.translate(g1.x, g1.y);
+            ctx.rotate(gearAngle);
+            ctx.strokeStyle = 'rgba(27, 42, 65, 0.3)';
             ctx.beginPath();
-            ctx.arc(0, 0, size * 0.6, 0, Math.PI * 2);
+            ctx.arc(0, 0, g1.r - 8, 0, Math.PI * 2);
             ctx.stroke();
+            for (let i = 0; i < g1.teeth; i++) {
+                ctx.rotate(Math.PI * 2 / g1.teeth);
+                ctx.strokeRect(-4, -g1.r, 8, 8);
+            }
+            ctx.restore();
 
-            const teeth = 8;
-            for (let i = 0; i < teeth; i++) {
-                ctx.rotate(Math.PI * 2 / teeth);
-                ctx.strokeRect(-size * 0.12, -size * 0.75, size * 0.24, size * 0.25);
+            // Gear 2
+            ctx.save();
+            ctx.translate(g2.x, g2.y);
+            ctx.rotate(-gearAngle * 1.4 + 0.3); // Inverse rotation ratio
+            ctx.strokeStyle = 'rgba(27, 42, 65, 0.3)';
+            ctx.beginPath();
+            ctx.arc(0, 0, g2.r - 6, 0, Math.PI * 2);
+            ctx.stroke();
+            for (let i = 0; i < g2.teeth; i++) {
+                ctx.rotate(Math.PI * 2 / g2.teeth);
+                ctx.strokeRect(-3, -g2.r, 6, 6);
             }
             ctx.restore();
         }
 
-        // 3. Robotic Process Automation (RPA) Continuous Workflow Loops
-        function drawWorkflowLoop(ctx, x, y, size, pulse) {
+        // 4. Parallel PCB Traces running cleanly
+        function drawPCBTraces() {
+            ctx.strokeStyle = 'rgba(50, 74, 95, 0.18)';
+            ctx.lineWidth = 1;
+            
+            const startX = 120;
+            const startY = 300;
+
+            // Parallel lines turning at 45 degrees
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 100, startY + 100);
+            ctx.lineTo(startX + 250, startY + 100);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(startX - 20, startY + 15);
+            ctx.lineTo(startX + 85, startY + 120);
+            ctx.lineTo(startX + 235, startY + 120);
+            ctx.stroke();
+
+            // Ending micro-controller pin circular contact pads
+            ctx.fillStyle = 'rgba(204, 201, 220, 0.25)';
+            ctx.beginPath();
+            ctx.arc(startX + 250, startY + 100, 3, 0, Math.PI * 2);
+            ctx.arc(startX + 235, startY + 120, 3, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // 5. RPA Continuous Loop Workflow (Pulsing slowly)
+        function drawRPAWorkflowLoop() {
+            const cx = canvas.width * 0.5;
+            const cy = canvas.height - 150;
+            const size = 60;
+
             ctx.save();
-            ctx.translate(x, y);
-            ctx.strokeStyle = 'rgba(50, 74, 95, 0.15)';
+            ctx.translate(cx, cy);
+            ctx.strokeStyle = 'rgba(27, 42, 65, 0.3)';
             ctx.lineWidth = 1;
 
-            // Simple infinity looping configuration
             ctx.beginPath();
             for (let i = 0; i < Math.PI * 2; i += 0.1) {
-                const rx = (size * 1.1) * Math.sin(i);
-                const ry = (size * 0.5) * Math.sin(i) * Math.cos(i);
+                const rx = (size * 1.3) * Math.sin(i);
+                const ry = (size * 0.6) * Math.sin(i) * Math.cos(i);
                 if (i === 0) ctx.moveTo(rx, ry);
                 else ctx.lineTo(rx, ry);
             }
             ctx.stroke();
+
+            // Pulsing data packet traveler along the track path
+            const travelX = (size * 1.3) * Math.sin(pulseTime);
+            const travelY = (size * 0.6) * Math.sin(pulseTime) * Math.cos(pulseTime);
+            ctx.beginPath();
+            ctx.arc(travelX, travelY, 3, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(204, 201, 220, 0.4)';
+            ctx.fill();
+
             ctx.restore();
         }
 
-        // 4. PCB Traces / Electrical Microchips
-        function drawPCB(ctx, x, y, size) {
-            ctx.strokeStyle = 'rgba(27, 42, 65, 0.25)';
-            ctx.lineWidth = 0.8;
-            ctx.strokeRect(x - size * 0.5, y - size * 0.5, size, size);
-
-            // Draw outgoing PCB traces at perfect 45-degree angles
-            ctx.beginPath();
-            ctx.moveTo(x - size * 0.5, y);
-            ctx.lineTo(x - size * 0.9, y - size * 0.4);
-            ctx.lineTo(x - size * 1.2, y - size * 0.4);
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.arc(x - size * 1.2, y - size * 0.4, 2, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(50, 74, 95, 0.3)';
-            ctx.fill();
-        }
-
-        function animate() {
+        function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            drawGrid();
+            drawPCBTraces();
+            drawInterlockingGears();
+            drawRobotLensHUD();
+            drawRPAWorkflowLoop();
 
-            elements.forEach(el => {
-                el.x += el.vx;
-                el.y += el.vy;
-                el.angle += el.rotSpeed;
-                el.pulse += 0.02;
+            // Slowly increment calculation angles and breath frequencies
+            gearAngle += 0.003;
+            pulseTime += 0.006;
+            lensScale = 1 + Math.sin(pulseTime * 1.5) * 0.03;
 
-                // Re-route on screen boundary collision
-                if (el.x < -el.size * 2) el.x = canvas.width + el.size;
-                if (el.x > canvas.width + el.size * 2) el.x = -el.size;
-                if (el.y < -el.size * 2) el.y = canvas.height + el.size;
-                if (el.y > canvas.height + el.size * 2) el.y = -el.size;
-
-                // Collision displacement reaction to cursor hover
-                if (mouse.x !== null && mouse.y !== null) {
-                    const dx = el.x - mouse.x;
-                    const dy = el.y - mouse.y;
-                    const dist = Math.hypot(dx, dy);
-                    if (dist < mouse.radius) {
-                        const force = (mouse.radius - dist) / mouse.radius;
-                        const targetAngle = Math.atan2(dy, dx);
-                        el.x += Math.cos(targetAngle) * force * 1.2;
-                        el.y += Math.sin(targetAngle) * force * 1.2;
-                    }
-                }
-
-                // Render respective technological vector patterns
-                switch (el.type) {
-                    case 'lens':
-                        drawRobotLens(ctx, el.x, el.y, el.size);
-                        break;
-                    case 'gear':
-                        drawGear(ctx, el.x, el.y, el.size, el.angle);
-                        break;
-                    case 'workflow':
-                        drawWorkflowLoop(ctx, el.x, el.y, el.size, el.pulse);
-                        break;
-                    case 'pcb':
-                        drawPCB(ctx, el.x, el.y, el.size);
-                        break;
-                }
-            });
-
-            // Connect nearby dynamic nodes mimicking data packet pathways
-            for (let i = 0; i < elements.length; i++) {
-                for (let j = i + 1; j < elements.length; j++) {
-                    const dist = Math.hypot(elements[i].x - elements[j].x, elements[i].y - elements[j].y);
-                    if (dist < 140) {
-                        ctx.beginPath();
-                        ctx.moveTo(elements[i].x, elements[i].y);
-                        ctx.lineTo(elements[j].x, elements[j].y);
-                        ctx.strokeStyle = `rgba(27, 42, 65, ${0.12 * (1 - dist / 140)})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-            }
-
-            requestAnimationFrame(animate);
+            requestAnimationFrame(draw);
         }
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        window.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
 
         window.addEventListener('resize', initCanvas);
         initCanvas();
-        animate();
+        draw();
     </script>
 </body>
 </html>
