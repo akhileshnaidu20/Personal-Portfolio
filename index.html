@@ -36,33 +36,33 @@
         }
     </script>
 </head>
-<body class="bg-color000 text-colorCCC9DC antialiased selection:bg-color324A5F/40">
+<body class="bg-color000 text-colorCCC9DC antialiased selection:bg-color324A5F/40 overflow-x-hidden">
 
-    <!-- Structured Engineering Schematic Background Canvas -->
+    <!-- Advanced Interactive HUD Canvas Background -->
     <canvas id="schematic-canvas" class="fixed inset-0 -z-10 pointer-events-none"></canvas>
 
     <!-- Scroll Progress Indicator -->
     <div id="scroll-tracker" class="fixed top-0 left-0 h-[2.5px] bg-colorCCC9DC z-50 w-0 transition-all duration-100"></div>
 
-    <!-- Minimal Custom Cursor (Hidden on touch devices) -->
-    <div id="custom-cursor" class="hidden md:block"></div>
+    <!-- Interactive Morphing Custom Cursor (Desktop Only) -->
+    <div id="custom-cursor" class="hidden md:flex items-center justify-center text-[8px] font-mono tracking-tighter text-color000 font-bold"></div>
 
     <!-- Navigation Header -->
-    <nav class="fixed top-0 w-full z-40 bg-color000/90 backdrop-blur-md border-b border-color1B2A41/50 py-4">
+    <nav class="fixed top-0 w-full z-40 bg-color000/90 backdrop-blur-md border-b border-color1B2A41/50 py-4 transition-all duration-300">
         <div class="container mx-auto px-4 md:px-6 max-w-6xl flex justify-between items-center">
-            <a href="#" class="font-display font-medium text-white tracking-widest text-lg hover-target">AKHILESH<span class="text-colorCCC9DC">.</span></a>
+            <a href="#" class="font-display font-medium text-white tracking-widest text-lg hover-target" data-cursor-text="HOME">AKHILESH<span class="text-colorCCC9DC">.</span></a>
             
             <!-- Desktop Links -->
             <div class="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-wider">
-                <a href="#about" class="text-colorCCC9DC/70 hover:text-white transition hover-target">About</a>
-                <a href="#experience" class="text-colorCCC9DC/70 hover:text-white transition hover-target">Experience</a>
-                <a href="#projects" class="text-colorCCC9DC/70 hover:text-white transition hover-target">Projects</a>
-                <a href="#skills" class="text-colorCCC9DC/70 hover:text-white transition hover-target">Skills</a>
-                <a href="#credentials" class="text-colorCCC9DC/70 hover:text-white transition hover-target">Credentials</a>
+                <a href="#about" class="text-colorCCC9DC/70 hover:text-white transition hover-target" data-cursor-text="PROFILE">About</a>
+                <a href="#experience" class="text-colorCCC9DC/70 hover:text-white transition hover-target" data-cursor-text="TIMELINE">Experience</a>
+                <a href="#projects" class="text-colorCCC9DC/70 hover:text-white transition hover-target" data-cursor-text="BUILDS">Projects</a>
+                <a href="#skills" class="text-colorCCC9DC/70 hover:text-white transition hover-target" data-cursor-text="STACK">Skills</a>
+                <a href="#credentials" class="text-colorCCC9DC/70 hover:text-white transition hover-target" data-cursor-text="DOCS">Credentials</a>
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://github.com/akhileshnaidu20" target="_blank" class="text-colorCCC9DC/70 hover:text-white transition hover-target">
+                <a href="https://github.com/akhileshnaidu20" target="_blank" class="text-colorCCC9DC/70 hover:text-white transition hover-target" data-cursor-text="OPEN">
                     <i class="fab fa-github text-xl"></i>
                 </a>
                 <!-- Mobile Navigation Trigger -->
@@ -94,15 +94,14 @@
                     Applying mechanical precision to high-concurrency neural pipelines and embedded microcontrollers to engineer zero-leak automation setups.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-4" data-aos="fade-right" data-aos-delay="300">
-                    <a href="#projects" class="border border-color324A5F hover:border-colorCCC9DC text-white px-6 py-3 rounded-md text-xs font-semibold uppercase tracking-wider transition-all hover-target">Explore Builds</a>
-                    <a href="https://www.linkedin.com/in/akhilesh-n-naidu" target="_blank" class="text-colorCCC9DC/70 hover:text-white px-6 py-3 text-xs font-semibold uppercase tracking-wider transition hover-target">LinkedIn <i class="fas fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+                    <a href="#projects" class="border border-color324A5F hover:border-colorCCC9DC text-white px-6 py-3 rounded-md text-xs font-semibold uppercase tracking-wider transition-all hover-target" data-cursor-text="GOTO">Explore Builds</a>
+                    <a href="https://www.linkedin.com/in/akhilesh-n-naidu" target="_blank" class="text-colorCCC9DC/70 hover:text-white px-6 py-3 text-xs font-semibold uppercase tracking-wider transition hover-target" data-cursor-text="EXTERNAL">LinkedIn <i class="fas fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
                 </div>
             </div>
             
             <div class="flex justify-center md:justify-end" data-aos="zoom-in" data-aos-delay="200">
                 <div class="relative group">
-                    <!-- Standard img element prioritizing repository profile photo with modern fallback -->
-                    <img src="profile.jpg" alt="Akhilesh N Naidu" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400';" class="w-44 h-44 md:w-56 md:h-56 rounded-full border-4 border-color1B2A41 object-cover relative z-10 shadow-2xl transition duration-500 group-hover:scale-105">
+                    <img src="profile.jpg" alt="Akhilesh N Naidu" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400';" class="w-44 h-44 md:w-56 md:h-56 rounded-full border-4 border-color1B2A41 object-cover relative z-10 shadow-2xl transition duration-500 group-hover:scale-105 hover-target" data-cursor-text="ME">
                 </div>
             </div>
         </div>
@@ -120,7 +119,7 @@
                         I focus on developing highly performant, resilient <span class="text-white font-semibold">AI/ML systems, ML automation systems, and embedded hardware integrations</span>. By applying a rigorous <span class="text-white font-semibold">Mechanical Engineering foundation</span>, I bridge the critical hardware-to-software gap that standard digital-only applications often neglect.
                     </p>
                     
-                    <div class="border-l-2 border-color324A5F pl-4 my-6 bg-color0C1821/20 py-4 pr-4 rounded-r-lg">
+                    <div class="border-l-2 border-color324A5F pl-4 my-6 bg-color0C1821/20 py-4 pr-4 rounded-r-lg hover:border-colorCCC9DC transition-colors duration-300">
                         <h4 class="font-display font-medium text-white mb-2 text-sm uppercase tracking-wider">The Hardware-Software Advantage:</h4>
                         <p class="text-sm">
                             Modern AI/ML architectures frequently underperform inside edge installations due to real-world physical discrepancies, mechanical system dynamics, and dirty sensor environments. Leveraging structural and thermodynamic perspectives, I systematically debug and resolve physical data inconsistencies, optimizing sensor input validation, and implementing low-latency model deployments directly inside resource-constrained embedded nodes.
@@ -133,11 +132,11 @@
                     
                     <!-- Contacts -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
-                        <div class="border border-color1B2A41/50 p-4 rounded-md bg-color0C1821/20">
+                        <div class="border border-color1B2A41/50 p-4 rounded-md bg-color0C1821/20 hover:border-colorCCC9DC transition-colors duration-300">
                             <span class="block text-colorCCC9DC/40 text-xs uppercase font-mono mb-1">Direct Connection</span>
-                            <a href="mailto:akhileshpower22@gmail.com" class="text-white text-xs md:text-sm hover:underline hover-target">akhileshpower22@gmail.com</a>
+                            <a href="mailto:akhileshpower22@gmail.com" class="text-white text-xs md:text-sm hover:underline hover-target" data-cursor-text="MAIL">akhileshpower22@gmail.com</a>
                         </div>
-                        <div class="border border-color1B2A41/50 p-4 rounded-md bg-color0C1821/20">
+                        <div class="border border-color1B2A41/50 p-4 rounded-md bg-color0C1821/20 hover:border-colorCCC9DC transition-colors duration-300">
                             <span class="block text-colorCCC9DC/40 text-xs uppercase font-mono mb-1">Operation Terminal</span>
                             <span class="text-white text-xs md:text-sm">Bengaluru, India</span>
                         </div>
@@ -152,25 +151,25 @@
         <div class="container mx-auto px-4 md:px-6 max-w-6xl">
             <h2 class="text-3xl font-display font-medium text-white mb-12 text-center">Technical Stack</h2>
             
-            <div class="flex justify-center gap-4 mb-12 flex-wrap" data-aos="fade-up">
-                <button onclick="switchTab('annotation')" id="btn-annotation" class="tab-btn active hover-target">AI/ML & Automation</button>
-                <button onclick="switchTab('development')" id="btn-development" class="tab-btn hover-target">Embedded & Dev</button>
-                <button onclick="switchTab('engineering')" id="btn-engineering" class="tab-btn hover-target">Mechanical Design</button>
+            <div class="flex justify-center gap-4 mb-12 flex-wrap animate-reveal" data-aos="fade-up">
+                <button onclick="switchTab('annotation')" id="btn-annotation" class="tab-btn active hover-target" data-cursor-text="VIEW">AI/ML & Automation</button>
+                <button onclick="switchTab('development')" id="btn-development" class="tab-btn hover-target" data-cursor-text="VIEW">Embedded & Dev</button>
+                <button onclick="switchTab('engineering')" id="btn-engineering" class="tab-btn hover-target" data-cursor-text="VIEW">Mechanical Design</button>
             </div>
 
-            <div class="glass p-6 md:p-8 rounded-lg max-w-3xl mx-auto min-h-[240px] relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass p-6 md:p-8 rounded-lg max-w-3xl mx-auto min-h-[240px] relative overflow-hidden transition-all duration-500 ease-out" data-aos="fade-up" data-aos-delay="100">
                 <div id="tab-annotation" class="tab-content transition-all duration-300">
                     <h3 class="text-lg font-bold text-white mb-4">Deep Learning, Dataset Prep & ML Automation</h3>
-                    <p class="text-colorCCC9DC/60 text-sm mb-6">Structuring training paradigms, data formatting pipelines, and validation steps.</p>
+                    <p class="text-colorCCC9DC/60 text-sm mb-6">Structuring training paradigms, deep annotations, and model refinement matrices.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">YOLO v8/v11</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Labelbox</span>
-                        <span class="tag">CVAT</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Image Segmentation</span>
-                        <span class="tag">Neural Networks</span>
+                        <span class="tag hover-target" data-cursor-text="AI">YOLO v8/v11</span>
+                        <span class="tag hover-target" data-cursor-text="VISION">OpenCV</span>
+                        <span class="tag hover-target" data-cursor-text="LABELS">Labelbox</span>
+                        <span class="tag hover-target" data-cursor-text="ANNOTATE">CVAT</span>
+                        <span class="tag hover-target" data-cursor-text="MATH">TensorFlow</span>
+                        <span class="tag hover-target" data-cursor-text="ML">PyTorch</span>
+                        <span class="tag hover-target" data-cursor-text="VISION">Image Segmentation</span>
+                        <span class="tag hover-target" data-cursor-text="DEEP">Neural Networks</span>
                     </div>
                 </div>
                 
@@ -178,14 +177,14 @@
                     <h3 class="text-lg font-bold text-white mb-4">Microcontrollers, IoT Protocols & Languages</h3>
                     <p class="text-colorCCC9DC/60 text-sm mb-6">Physical device automation, low-latency firmware scripting, and pipeline integration.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">Python</span>
-                        <span class="tag">React.js</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Flask / Django</span>
-                        <span class="tag">AWS (EC2, S3, Lambda)</span>
-                        <span class="tag">SQL / MongoDB</span>
-                        <span class="tag">Linux/Bash</span>
-                        <span class="tag">Git / Docker</span>
+                        <span class="tag hover-target" data-cursor-text="CODE">Python</span>
+                        <span class="tag hover-target" data-cursor-text="WEB">React.js</span>
+                        <span class="tag hover-target" data-cursor-text="SERVER">Node.js</span>
+                        <span class="tag hover-target" data-cursor-text="API">Flask / Django</span>
+                        <span class="tag hover-target" data-cursor-text="CLOUD">AWS (EC2, S3, Lambda)</span>
+                        <span class="tag hover-target" data-cursor-text="DB">SQL / MongoDB</span>
+                        <span class="tag hover-target" data-cursor-text="TERMINAL">Linux/Bash</span>
+                        <span class="tag hover-target" data-cursor-text="CONTAINER">Git / Docker</span>
                     </div>
                 </div>
 
@@ -193,11 +192,11 @@
                     <h3 class="text-lg font-bold text-white mb-4">CAD, Fluid Dynamics & Finite Element Analysis</h3>
                     <p class="text-colorCCC9DC/60 text-sm mb-6">Thermal evaluation, structural calculations, and EV hardware systems design.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">SolidWorks</span>
-                        <span class="tag">ANSYS Workbench</span>
-                        <span class="tag">MATLAB</span>
-                        <span class="tag">E-Mobility Design</span>
-                        <span class="tag">BMS for EV Systems</span>
+                        <span class="tag hover-target" data-cursor-text="3D">SolidWorks</span>
+                        <span class="tag hover-target" data-cursor-text="SIMULATION">ANSYS Workbench</span>
+                        <span class="tag hover-target" data-cursor-text="MATH">MATLAB</span>
+                        <span class="tag hover-target" data-cursor-text="EV">E-Mobility Design</span>
+                        <span class="tag hover-target" data-cursor-text="POWER">BMS for EV Systems</span>
                     </div>
                 </div>
             </div>
@@ -208,14 +207,17 @@
     <section id="experience" class="py-24 md:py-32 border-t border-color1B2A41/30">
         <div class="container mx-auto px-4 md:px-6 max-w-6xl">
             <h2 class="text-3xl font-display font-medium text-white mb-16">Chronology</h2>
-            <div class="relative border-l border-color1B2A41 pl-6 md:pl-8 space-y-16 ml-2">
-                
+            
+            <!-- Dynamic Interactive Line Pathway -->
+            <div class="relative pl-6 md:pl-8 space-y-16 ml-2 border-l border-color1B2A41">
+                <div id="experience-progress-line" class="absolute left-[-1px] top-0 w-[2px] bg-gradient-to-b from-colorCCC9DC to-color324A5F origin-top h-0 transition-all duration-300"></div>
+
                 <!-- Amazon -->
-                <div class="relative group" data-aos="fade-left">
-                    <div class="absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F group-hover:bg-white transition-colors"></div>
+                <div class="relative group timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F transition-all duration-300"></div>
                     <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
                         <div>
-                            <h4 class="text-lg font-bold text-white">ML Data Associate (GO-AI)</h4>
+                            <h4 class="text-lg font-bold text-white transition-all duration-300 group-hover:text-colorCCC9DC">ML Data Associate (GO-AI)</h4>
                             <p class="text-sm text-colorCCC9DC/50">Amazon | Bengaluru, India</p>
                         </div>
                         <span class="text-xs font-mono text-colorCCC9DC/50 mt-1 md:mt-0">Dec 2025 — May 2026</span>
@@ -228,11 +230,11 @@
                 </div>
 
                 <!-- Freelance -->
-                <div class="relative group" data-aos="fade-left">
-                    <div class="absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F group-hover:bg-white transition-colors"></div>
+                <div class="relative group timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F transition-all duration-300"></div>
                     <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
                         <div>
-                            <h4 class="text-lg font-bold text-white">Freelance Computer Vision Developer</h4>
+                            <h4 class="text-lg font-bold text-white transition-all duration-300 group-hover:text-colorCCC9DC">Freelance Computer Vision Developer</h4>
                             <p class="text-sm text-colorCCC9DC/50">Independent Portfolio Work | Bengaluru, India</p>
                         </div>
                         <span class="text-xs font-mono text-colorCCC9DC/50 mt-1 md:mt-0">06/2024 — Present</span>
@@ -245,11 +247,11 @@
                 </div>
 
                 <!-- Bhanzu -->
-                <div class="relative group" data-aos="fade-left">
-                    <div class="absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F group-hover:bg-white transition-colors"></div>
+                <div class="relative group timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F transition-all duration-300"></div>
                     <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
                         <div>
-                            <h4 class="text-lg font-bold text-white">Strategic Partnership Executive</h4>
+                            <h4 class="text-lg font-bold text-white transition-all duration-300 group-hover:text-colorCCC9DC">Strategic Partnership Executive</h4>
                             <p class="text-sm text-colorCCC9DC/50">Bhanzu | Bengaluru, India</p>
                         </div>
                         <span class="text-xs font-mono text-colorCCC9DC/50 mt-1 md:mt-0">07/2023 — 06/2024</span>
@@ -262,11 +264,11 @@
                 </div>
 
                 <!-- Bosch -->
-                <div class="relative group" data-aos="fade-left">
-                    <div class="absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F group-hover:bg-white transition-colors"></div>
+                <div class="relative group timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[39px] top-1 w-2.5 h-2.5 rounded-full bg-color324A5F transition-all duration-300"></div>
                     <div class="flex flex-col md:flex-row md:justify-between items-start mb-2">
                         <div>
-                            <h4 class="text-lg font-bold text-white">Internship Trainee</h4>
+                            <h4 class="text-lg font-bold text-white transition-all duration-300 group-hover:text-colorCCC9DC">Internship Trainee</h4>
                             <p class="text-sm text-colorCCC9DC/50">BOSCH Ltd. (Sparkplug Manufacturing) | Bengaluru, India</p>
                         </div>
                         <span class="text-xs font-mono text-colorCCC9DC/50 mt-1 md:mt-0">Sept — Oct 2022</span>
@@ -288,38 +290,38 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- Legal AI Project -->
-                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up">
+                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC hover:shadow-2xl hover:shadow-black/60 group interactive-card hover-target" data-cursor-text="GAVEL" data-aos="fade-up">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
-                        <img src="legal-ai.jpg" alt="Legal AI Court Gavel and Document" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <img src="legal-ai.jpg" alt="Legal AI Court Gavel and Document" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out">
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">HackBLR 2026 Build</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Legal AI Assistant</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors duration-300">Legal AI Assistant</h3>
                     <p class="text-colorCCC9DC/70 text-sm mb-6 leading-relaxed">
                         An AI assistant constructed to parse unstructured legal drafts, matching queries to Vector databases to automate citation search and detect policy compliance errors.
                     </p>
-                    <a href="https://github.com/akhileshnaidu20/Legalai-Hackblr-2026" target="_blank" class="text-xs font-bold uppercase tracking-wider text-white hover:underline hover-target inline-flex items-center gap-2">Repository <i class="fas fa-arrow-up-right-from-square text-[9px]"></i></a>
+                    <a href="https://github.com/akhileshnaidu20/Legalai-Hackblr-2026" target="_blank" class="text-xs font-bold uppercase tracking-wider text-white hover:underline inline-flex items-center gap-2">Repository <i class="fas fa-arrow-up-right-from-square text-[9px]"></i></a>
                 </div>
 
                 <!-- KisanMitra Project -->
-                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC hover:shadow-2xl hover:shadow-black/60 group interactive-card hover-target" data-cursor-text="CROP" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
-                        <img src="kisan-mitra.jpg" alt="KisanMitra AI & Agriculture Platform" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <img src="kisan-mitra.jpg" alt="KisanMitra AI & Agriculture Platform" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out">
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">AI & Agriculture</span>
-                    <h3 class="text-xl font-bold text-white mb-2">KisanMitra</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors duration-300">KisanMitra</h3>
                     <p class="text-colorCCC9DC/70 text-sm mb-6 leading-relaxed">
                         A modern agricultural evaluation program that evaluates geographic soil parameters and recommends crops using classification models.
                     </p>
-                    <a href="https://github.com/akhileshnaidu20/KisanMitra" target="_blank" class="text-xs font-bold uppercase tracking-wider text-white hover:underline hover-target inline-flex items-center gap-2">Repository <i class="fas fa-arrow-up-right-from-square text-[9px]"></i></a>
+                    <a href="https://github.com/akhileshnaidu20/KisanMitra" target="_blank" class="text-xs font-bold uppercase tracking-wider text-white hover:underline inline-flex items-center gap-2">Repository <i class="fas fa-arrow-up-right-from-square text-[9px]"></i></a>
                 </div>
 
                 <!-- Vehicle Collision Detection System -->
-                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up">
+                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC hover:shadow-2xl hover:shadow-black/60 group interactive-card hover-target" data-cursor-text="COLLIDE" data-aos="fade-up">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
-                        <img src="collision-detection.jpg" alt="Vehicle Collision Detection System" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <img src="collision-detection.jpg" alt="Vehicle Collision Detection System" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out">
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">Computer Vision</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Vehicle Collision Detection</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors duration-300">Vehicle Collision Detection</h3>
                     <p class="text-colorCCC9DC/70 text-sm mb-6 leading-relaxed">
                         Implemented YOLOv8 for real-time dashcam vehicle classification. Integrated custom tracking models inside OpenCV to lower false alarm rates on overlapping frames.
                     </p>
@@ -327,12 +329,12 @@
                 </div>
 
                 <!-- Delivery Partner Identification Tool -->
-                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC hover:shadow-2xl hover:shadow-black/60 group interactive-card hover-target" data-cursor-text="DELIVER" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
-                        <img src="delivery-partner.png" alt="Delivery Partner Identification Layout" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <img src="delivery-partner.png" alt="Delivery Partner Identification Layout" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out">
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">Deep Learning</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Delivery Partner Identification</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors duration-300">Delivery Partner Identification</h3>
                     <p class="text-colorCCC9DC/70 text-sm mb-6 leading-relaxed">
                         Created fine-tuned Vision Transformer pipelines using CVAT multi-class identification. Decreased manual dataset validation routines using custom evaluation automations.
                     </p>
@@ -340,21 +342,21 @@
                 </div>
 
                 <!-- Composite Material Analysis -->
-                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/60 group md:col-span-2" data-aos="fade-up">
+                <div class="border border-color1B2A41 bg-color0C1821/70 backdrop-blur-md rounded-lg p-6 hover:border-colorCCC9DC hover:shadow-2xl hover:shadow-black/60 group md:col-span-2 interactive-card hover-target" data-cursor-text="MATERIAL" data-aos="fade-up">
                     <div class="h-44 bg-color000 rounded-md mb-6 flex items-center justify-center border border-color1B2A41/50 relative overflow-hidden">
                         <svg class="absolute inset-0 w-full h-full stroke-color324A5F/30" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <pattern id="pat-composite" width="16" height="16" patternUnits="userSpaceOnUse">
+                                <pattern id="pat-composite-mesh" width="16" height="16" patternUnits="userSpaceOnUse">
                                     <path d="M 16 0 L 0 0 0 16" fill="none" stroke-width="0.5"/>
                                 </pattern>
                             </defs>
-                            <rect width="100%" height="100%" fill="url(#pat-composite)" />
+                            <rect width="100%" height="100%" fill="url(#pat-composite-mesh)" />
                             <circle cx="50%" cy="50%" r="50" class="stroke-color324A5F/20 fill-none" stroke-width="0.5" />
                         </svg>
                         <i class="fas fa-chart-line text-3xl text-colorCCC9DC group-hover:scale-110 transition duration-500 relative z-10"></i>
                     </div>
                     <span class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest block mb-1">B.Tech Graduation Project | 2023</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Composite Material Analysis Dashboard</h3>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors duration-300">Composite Material Analysis Dashboard</h3>
                     <p class="text-colorCCC9DC/70 text-sm mb-6 leading-relaxed">
                         Evaluated structural mechanical performance curves of newly engineered carbon mixtures. Collated and annotated custom physical structural matrices used for FEA validation routines.
                     </p>
@@ -384,10 +386,10 @@
                     <!-- Languages -->
                     <h4 class="text-xs font-mono text-colorCCC9DC/50 uppercase tracking-widest mt-10 mb-4">Linguistic Profile</h4>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60">English (Professional)</span>
-                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60">Telugu (Native)</span>
-                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60">Kannada (Conversational)</span>
-                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60">Hindi (Conversational)</span>
+                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60 hover:text-white transition-colors hover-target" data-cursor-text="ENG">English (Professional)</span>
+                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60 hover:text-white transition-colors hover-target" data-cursor-text="TEL">Telugu (Native)</span>
+                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60 hover:text-white transition-colors hover-target" data-cursor-text="KAN">Kannada (Conversational)</span>
+                        <span class="text-xs border border-color1B2A41 px-3 py-1 rounded bg-color000 text-colorCCC9DC/60 hover:text-white transition-colors hover-target" data-cursor-text="HIN">Hindi (Conversational)</span>
                     </div>
                 </div>
 
@@ -404,7 +406,7 @@
 
                     <!-- Credentials folder link -->
                     <div class="pt-8">
-                        <a href="https://drive.google.com/drive/folders/1Ub5GCwBIQAF9n5mPX4e5HRnO0YF1aDxF?usp=sharing" target="_blank" class="block text-center border border-color1B2A41 hover:border-colorCCC9DC text-white py-3 rounded text-xs font-semibold uppercase tracking-wider transition hover-target">
+                        <a href="https://drive.google.com/drive/folders/1Ub5GCwBIQAF9n5mPX4e5HRnO0YF1aDxF?usp=sharing" target="_blank" class="block text-center border border-color1B2A41 hover:border-colorCCC9DC text-white py-3 rounded text-xs font-semibold uppercase tracking-wider transition hover-target" data-cursor-text="DRIVE">
                             <i class="fas fa-external-link-alt mr-2 text-[10px]"></i> Open Credentials Database (Drive)
                         </a>
                     </div>
@@ -416,9 +418,9 @@
     <!-- Footer -->
     <footer class="py-16 border-t border-color1B2A41/30 text-center">
         <div class="flex justify-center gap-8 mb-8">
-            <a href="https://github.com/akhileshnaidu20" target="_blank" class="text-colorCCC9DC/50 hover:text-white text-2xl transition hover-target"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/akhilesh-n-naidu" target="_blank" class="text-colorCCC9DC/50 hover:text-white text-2xl transition hover-target"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:akhileshpower22@gmail.com" class="text-colorCCC9DC/50 hover:text-white text-2xl transition hover-target"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/akhileshnaidu20" target="_blank" class="text-slate-500 hover:text-white text-2xl transition hover-target" data-cursor-text="GITHUB"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/akhilesh-n-naidu" target="_blank" class="text-slate-500 hover:text-white text-2xl transition hover-target" data-cursor-text="LINKEDIN"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:akhileshpower22@gmail.com" class="text-slate-500 hover:text-white text-2xl transition hover-target" data-cursor-text="EMAIL"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="text-colorCCC9DC/30 text-xs italic tracking-wider uppercase">© 2026 Akhilesh N Naidu • Mechanical Precision & AI</p>
     </footer>
@@ -428,20 +430,31 @@
     <script>
         AOS.init({ duration: 800, once: true });
 
-        // Minimalist Tab System
+        // Minimalist Tab System with smooth exit/entrance
         function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            document.getElementById('tab-' + tabId).classList.remove('hidden');
-            document.getElementById('btn-' + tabId).classList.add('active');
+            const container = document.querySelector('.tab-content:not(.hidden)');
+            if (container) {
+                container.style.opacity = 0;
+                setTimeout(() => {
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    const next = document.getElementById('tab-' + tabId);
+                    next.classList.remove('hidden');
+                    next.style.opacity = 0;
+                    // Trigger reflow to render transition
+                    next.offsetHeight;
+                    next.style.opacity = 1;
+                    document.getElementById('btn-' + tabId).classList.add('active');
+                }, 150);
+            }
         }
 
-        // Custom pointer translation (Desktop Only)
+        // Custom pointer translation & dynamic text display (Desktop Only)
         const cursor = document.getElementById('custom-cursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
@@ -449,15 +462,33 @@
         });
 
         document.querySelectorAll('.hover-target').forEach(item => {
-            item.addEventListener('mouseenter', () => cursor.classList.add('scaled'));
-            item.addEventListener('mouseleave', () => cursor.classList.remove('scaled'));
+            item.addEventListener('mouseenter', () => {
+                cursor.classList.add('scaled');
+                const text = item.getAttribute('data-cursor-text') || '';
+                cursor.innerText = text;
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('scaled');
+                cursor.innerText = '';
+            });
         });
 
-        // Track reading vertical offsets
+        // Track reading vertical offsets & timeline drawing progression
         window.addEventListener('scroll', () => {
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = (window.scrollY / docHeight) * 100;
             document.getElementById('scroll-tracker').style.width = scrolled + '%';
+
+            // Draw line pathway matching scroll depth on timeline section
+            const timeline = document.querySelector('#experience');
+            if (timeline) {
+                const rect = timeline.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+                if (rect.top < viewHeight && rect.bottom > 0) {
+                    const progress = Math.min(Math.max((viewHeight - rect.top) / rect.height, 0), 1) * 100;
+                    document.getElementById('experience-progress-line').style.height = progress + '%';
+                }
+            }
         });
 
         // Responsive mobile panel slider
@@ -473,25 +504,46 @@
             }
         }
 
+        // --- Custom 3D Card Hover Interaction ---
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const midX = rect.width / 2;
+                const midY = rect.height / 2;
+                
+                const rotX = ((y - midY) / midY) * 5; // Rotate angle X
+                const rotY = ((midX - x) / midX) * 5; // Rotate angle Y
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+        });
+
         // --- Structured Interactive Blueprint Schematic Background Canvas ---
-        // Draws structured, clean engineering elements that slowly breathe or trace on a grid
         const canvas = document.getElementById('schematic-canvas');
         const ctx = canvas.getContext('2d');
 
-        let gridCells = [];
         let gearAngle = 0;
-        let traceProgress = 0;
         let lensScale = 1;
         let pulseTime = 0;
+        let targetSpeed = 0.003;
+        let speed = 0.003;
+        let mouseX = null;
+        let mouseY = null;
 
         function initCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
 
-        // 1. Draw structured geometric background grid
+        // Draw structured geometric background grid
         function drawGrid() {
-            ctx.strokeStyle = 'rgba(27, 42, 65, 0.2)';
+            ctx.strokeStyle = 'rgba(27, 42, 65, 0.15)';
             ctx.lineWidth = 0.5;
             const gridSize = 40;
             
@@ -507,7 +559,7 @@
             ctx.stroke();
         }
 
-        // 2. Robotic Optic Lens Schematic (Always clean and anchored top-right)
+        // Robotic Optic Lens Schematic (Responsive Tracking)
         function drawRobotLensHUD() {
             const x = canvas.width - 150;
             const y = 200;
@@ -515,7 +567,7 @@
             ctx.strokeStyle = 'rgba(50, 74, 95, 0.25)';
             ctx.lineWidth = 0.8;
 
-            // Outer Target Tracker Box
+            // Target Box
             ctx.strokeRect(x - 60, y - 60, 120, 120);
             
             // Pulsing Internal Lens Ring
@@ -523,7 +575,7 @@
             ctx.arc(x, y, 40 * lensScale, 0, Math.PI * 2);
             ctx.stroke();
 
-            // Intersecting target hair lines
+            // Intersecting Target Lines
             ctx.beginPath();
             ctx.moveTo(x - 70, y); ctx.lineTo(x - 45, y);
             ctx.moveTo(x + 45, y); ctx.lineTo(x + 70, y);
@@ -531,13 +583,21 @@
             ctx.moveTo(x, y + 45); ctx.lineTo(x, y + 70);
             ctx.stroke();
 
-            // Coordinate metrics text
+            // Active Scan Overlay from Mouse Position
+            if (mouseX && mouseY) {
+                ctx.beginPath();
+                ctx.strokeStyle = 'rgba(204, 201, 220, 0.03)';
+                ctx.moveTo(x, y);
+                ctx.lineTo(mouseX, mouseY);
+                ctx.stroke();
+            }
+
             ctx.fillStyle = 'rgba(204, 201, 220, 0.2)';
             ctx.font = '9px monospace';
             ctx.fillText("SYS.FOC_A: 94.2%", x - 45, y + 80);
         }
 
-        // 3. Interlocking Mechanical Gears Schematic (Anchored bottom-left)
+        // Mechanical Gears
         function drawInterlockingGears() {
             const g1 = { x: 180, y: canvas.height - 180, r: 50, teeth: 10 };
             const g2 = { x: 260, y: canvas.height - 110, r: 35, teeth: 8 };
@@ -559,7 +619,7 @@
             // Gear 2
             ctx.save();
             ctx.translate(g2.x, g2.y);
-            ctx.rotate(-gearAngle * 1.4 + 0.3); // Inverse rotation ratio
+            ctx.rotate(-gearAngle * 1.4 + 0.3);
             ctx.strokeStyle = 'rgba(27, 42, 65, 0.3)';
             ctx.beginPath();
             ctx.arc(0, 0, g2.r - 6, 0, Math.PI * 2);
@@ -571,15 +631,15 @@
             ctx.restore();
         }
 
-        // 4. Parallel PCB Traces running cleanly
+        // PCB Traces (Dynamic Lighting)
         function drawPCBTraces() {
-            ctx.strokeStyle = 'rgba(50, 74, 95, 0.18)';
-            ctx.lineWidth = 1;
-            
             const startX = 120;
             const startY = 300;
 
-            // Parallel lines turning at 45 degrees
+            ctx.strokeStyle = 'rgba(50, 74, 95, 0.18)';
+            ctx.lineWidth = 1;
+
+            // Main Pathways
             ctx.beginPath();
             ctx.moveTo(startX, startY);
             ctx.lineTo(startX + 100, startY + 100);
@@ -592,7 +652,16 @@
             ctx.lineTo(startX + 235, startY + 120);
             ctx.stroke();
 
-            // Ending micro-controller pin circular contact pads
+            // Dynamic electrical pulses on hover
+            if (mouseX && mouseY && Math.hypot(mouseX - startX, mouseY - startY) < 250) {
+                ctx.strokeStyle = 'rgba(204, 201, 220, 0.6)';
+                ctx.beginPath();
+                ctx.moveTo(startX + 100, startY + 100);
+                ctx.lineTo(startX + 150 + Math.sin(pulseTime * 5) * 50, startY + 100);
+                ctx.stroke();
+            }
+
+            // Contact Pads
             ctx.fillStyle = 'rgba(204, 201, 220, 0.25)';
             ctx.beginPath();
             ctx.arc(startX + 250, startY + 100, 3, 0, Math.PI * 2);
@@ -600,7 +669,7 @@
             ctx.fill();
         }
 
-        // 5. RPA Continuous Loop Workflow (Pulsing slowly)
+        // RPA Loop Workflow
         function drawRPAWorkflowLoop() {
             const cx = canvas.width * 0.5;
             const cy = canvas.height - 150;
@@ -620,7 +689,6 @@
             }
             ctx.stroke();
 
-            // Pulsing data packet traveler along the track path
             const travelX = (size * 1.3) * Math.sin(pulseTime);
             const travelY = (size * 0.6) * Math.sin(pulseTime) * Math.cos(pulseTime);
             ctx.beginPath();
@@ -631,6 +699,22 @@
             ctx.restore();
         }
 
+        // Draw Interactive Crosshair tracking the cursor
+        function drawCursorCrosshair() {
+            if (mouseX && mouseY) {
+                ctx.strokeStyle = 'rgba(204, 201, 220, 0.05)';
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(mouseX, 0); ctx.lineTo(mouseX, canvas.height);
+                ctx.moveTo(0, mouseY); ctx.lineTo(canvas.width, mouseY);
+                ctx.stroke();
+
+                ctx.fillStyle = 'rgba(204, 201, 220, 0.15)';
+                ctx.font = '8px monospace';
+                ctx.fillText(`LOC: [${Math.floor(mouseX)}, ${Math.floor(mouseY)}]`, mouseX + 15, mouseY - 15);
+            }
+        }
+
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
@@ -639,14 +723,35 @@
             drawInterlockingGears();
             drawRobotLensHUD();
             drawRPAWorkflowLoop();
+            drawCursorCrosshair();
 
-            // Slowly increment calculation angles and breath frequencies
-            gearAngle += 0.003;
+            // Smoothly adjust gears based on scroll action acceleration
+            speed += (targetSpeed - speed) * 0.1;
+            gearAngle += speed;
             pulseTime += 0.006;
             lensScale = 1 + Math.sin(pulseTime * 1.5) * 0.03;
 
             requestAnimationFrame(draw);
         }
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        window.addEventListener('mouseleave', () => {
+            mouseX = null;
+            mouseY = null;
+        });
+
+        window.addEventListener('scroll', () => {
+            // Speed up gears temporarily on active scroll event
+            targetSpeed = 0.025;
+            clearTimeout(window.scrollSpeedTimeout);
+            window.scrollSpeedTimeout = setTimeout(() => {
+                targetSpeed = 0.003;
+            }, 100);
+        });
 
         window.addEventListener('resize', initCanvas);
         initCanvas();
