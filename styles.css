@@ -1,0 +1,104 @@
+/* Core Styling Rules */
+body {
+    background-color: #000000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Page Scrolling Improvements */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Interactive Follower Cursor (Desktop-Only) */
+#custom-cursor {
+    width: 6px;
+    height: 6px;
+    background: #CCC9DC;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
+}
+
+#custom-cursor.scaled {
+    width: 28px;
+    height: 28px;
+    background: rgba(204, 201, 220, 0.15);
+}
+
+/* Transparent Panel Background Overrides */
+.glass {
+    background: #0C1821;
+    border: 1px solid #1B2A41;
+}
+
+/* Custom Tab Buttons */
+.tab-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 1.5rem;
+    color: #324A5F;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-btn:hover {
+    color: #CCC9DC;
+}
+
+.tab-btn.active {
+    color: #ffffff;
+    border-bottom-color: #CCC9DC;
+}
+
+/* Micro-interaction Tag Blocks */
+.tag {
+    font-size: 0.725rem;
+    font-weight: 500;
+    background: #000000;
+    border: 1px solid #1B2A41;
+    color: #CCC9DC;
+    padding: 0.35rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, border-color;
+}
+
+.tag:hover {
+    border-color: #CCC9DC;
+    color: #ffffff;
+}
+
+/* Custom Scrollbar configuration */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #1B2A41;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #324A5F;
+}
+
+/* Accelerate transitions */
+.glass, .tab-btn, .tag, a, button {
+    will-change: transform, opacity;
+}
+
+/* Mobile Alignments & Fallbacks */
+@media (max-width: 768px) {
+    #custom-cursor {
+        display: none !important;
+    }
+}
