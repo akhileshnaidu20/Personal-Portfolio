@@ -10,10 +10,10 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Interactive Follower Cursor (Desktop-Only) */
+/* Advanced Interactive Snapping Custom Cursor */
 #custom-cursor {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background: #CCC9DC;
     border-radius: 50%;
     position: fixed;
@@ -21,13 +21,20 @@ html {
     z-index: 100;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
-    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                background-color 0.3s ease, 
+                border-radius 0.3s ease;
+    box-shadow: 0 0 10px rgba(204, 201, 220, 0);
 }
 
 #custom-cursor.scaled {
-    width: 28px;
-    height: 28px;
-    background: rgba(204, 201, 220, 0.15);
+    width: 44px;
+    height: 44px;
+    background: #CCC9DC;
+    border-radius: 8px; /* Dynamic morph into a tech tag on hover */
+    mix-blend-mode: normal;
+    box-shadow: 0 4px 15px rgba(204, 201, 220, 0.2);
 }
 
 /* Transparent Panel Background Overrides */
@@ -91,8 +98,30 @@ html {
     background: #324A5F;
 }
 
+/* 3D Elastic Cards */
+.interactive-card {
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Scroll-drawn progress line matching user viewport */
+#experience-progress-line {
+    background: linear-gradient(to bottom, #CCC9DC, #1B2A41);
+    transition: height 0.1s ease-out;
+}
+
+/* Active Timeline Circle Highlights */
+.timeline-item:hover .timeline-dot {
+    background-color: #CCC9DC !important;
+    transform: scale(1.4);
+    box-shadow: 0 0 12px #CCC9DC;
+}
+
 /* Accelerate transitions */
-.glass, .tab-btn, .tag, a, button {
+.glass, .tab-btn, .tag, a, button, .interactive-card {
     will-change: transform, opacity;
 }
 
